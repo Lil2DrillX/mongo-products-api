@@ -1,0 +1,1 @@
+import mongoose from "mongoose"; const productSchema = new mongoose.Schema({ name: { type: String, required: true, trim: true, minlength: 2, maxlength: 100 }, price: { type: Number, required: true, min: 0 }, category: { type: String, enum: ["computer", "phone", "other"], default: "other" } }, { timestamps: true }); export const Product = mongoose.model("Product", productSchema);
